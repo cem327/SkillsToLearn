@@ -1,23 +1,23 @@
 ## Overview
 
-Bu proje, çeşitli online iş ilanı sitelerinden job postları çekerek, bu ilanlarda kullanılan kelimeleri analiz eden ve sirketler tarafından istenilen yetenekleri sıralayan bir sistemdir.
+This project is a system that retrieves job posts from various online job listing sites, analyzes the words used in these posts, and ranks the skills desired by companies.
 
-## Proje Amaçları
+## Project Objectives
 
-- İş ilanlarının içeriğini çekme ve depolama.
-- İş ilanlarındaki kelimeleri analiz etme.
-- Sirketler tarafından istenilen yetenekleri belirleme ve sıralama.
+*   Fetching and storing the content of job posts.
+*   Analyzing the words in job posts.
+*   Identifying and ranking the skills desired by companies.
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
-- Lombok
-- Hibernate
-- PostgreSQL
-- Node.js
-- Apache Commons CSV
-- Gradle
+*   Lombok
+*   Hibernate
+*   PostgreSQL
+*   Node.js
+*   Apache Commons CSV
+*   Gradle
 
-## Katkıda Bulunma
+## How to Contribute
 
 Mail ile iletisime gecebilirsiniz. <cmylmz327@hotmail.com>
 
