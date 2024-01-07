@@ -19,5 +19,5 @@ This project is a system that retrieves job posts from various online job listin
 
 ## How to Contribute
 
-Mail ile iletisime gecebilirsiniz. <cmylmz327@hotmail.com>
+You can contact via email: cmylmz327@hotmail.com
 
