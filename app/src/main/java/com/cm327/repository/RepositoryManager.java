@@ -1,9 +1,7 @@
 package com.cm327.repository;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.NoResultException;
-import jakarta.persistence.Persistence;
+import com.cm327.entity.Company;
+import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
@@ -14,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class RepositoryManager<T,ID> implements ICrud<T,ID>{
+public class RepositoryManager<T,ID> implements ICrud<T,ID>{ // TODO: NEEDS UPDATE METHOD. CHECK FOR UNCHECKED CAST WARNING
     private final EntityManagerFactory emf;
     private EntityManager em;
     private final T t;
@@ -38,6 +36,7 @@ public class RepositoryManager<T,ID> implements ICrud<T,ID>{
             em.getTransaction().rollback();
             throw e; // veya başka bir işlem yapabilirsiniz
         } finally {
+            System.out.println("session closed");
             em.close();
         }
     }
@@ -45,6 +44,7 @@ public class RepositoryManager<T,ID> implements ICrud<T,ID>{
     @Override
     public T save(T entity) {
        try{
+           System.out.println("save called");
          openSession();
          em.persist(entity);
          closeSession();
@@ -72,6 +72,7 @@ public class RepositoryManager<T,ID> implements ICrud<T,ID>{
 
     @Override
     public Optional<T> findById(ID id) {
+        em = emf.createEntityManager();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = (CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass()); // select * from tblsecmen where id=? ->
         Root<T> root = (Root<T>) criteriaQuery.from(t.getClass());
@@ -88,6 +89,7 @@ public class RepositoryManager<T,ID> implements ICrud<T,ID>{
 
     @Override
     public boolean existById(ID id) {
+        em = emf.createEntityManager();
         CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = (CriteriaQuery<T>) criteriaBuilder.createQuery(t.getClass()); // select * from tblsecmen where id=? ->
         Root<T> root = (Root<T>) criteriaQuery.from(t.getClass());
@@ -173,4 +175,34 @@ public class RepositoryManager<T,ID> implements ICrud<T,ID>{
         list = em.createQuery(criteriaQuery).getResultList();
         return list;
     }
+
+    public T update(T entity) {
+        EntityTransaction transaction = null;
+
+        try {
+            openSession();
+            transaction = em.getTransaction();
+            transaction.begin();
+
+            em.merge(entity);  // merge kullanarak varlığı güncelleme
+
+            transaction.commit();
+        } catch (Exception exception) {
+            if (transaction != null && transaction.isActive()) {
+                transaction.rollback();
+            }
+
+            exception.printStackTrace();  // veya loglama yapabilirsiniz
+
+        } finally {
+            if (em.isOpen()) {
+                closeSession();
+            }
+        }
+
+        return entity;
+    }
+
+
+
 }

@@ -7,3 +7,4 @@ public class JobPostRepository extends RepositoryManager<JobPosts,Long>{
         super(new JobPosts());
     }
 }
+

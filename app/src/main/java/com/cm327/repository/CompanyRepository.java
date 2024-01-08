@@ -6,4 +6,5 @@ public class CompanyRepository extends RepositoryManager<Company,Long>{
     public CompanyRepository() {
         super(new Company());
     }
+
 }

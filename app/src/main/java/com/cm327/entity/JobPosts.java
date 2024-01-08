@@ -2,11 +2,13 @@ package com.cm327.entity;
 
 import com.cm327.utils.TurkishCity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.util.Date;
+import java.util.List;
+
+@Setter
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +21,8 @@ public class JobPosts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String postTitle;
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "company_id")
     Company company;
     @Enumerated(EnumType.STRING)
     TurkishCity location;
@@ -27,24 +30,20 @@ public class JobPosts {
     String link;
     @Column(columnDefinition = "TEXT")
     String details;
+    @Temporal(TemporalType.DATE)
+    Date date;
+    @ElementCollection
+    private List<String> words;
+    int openDays;
 
-    public JobPosts(String postTitle, String companyName, TurkishCity location, String link, String details) {
+    public JobPosts(String postTitle, Company company, TurkishCity location, String link, String details, Date date, int openDays) {
         this.postTitle = postTitle;
-        this.company = new Company(companyName);
+        this.company = company;
         this.location = location;
         this.link = link;
         this.details = details;
+        this.date = date;
+        this.openDays = openDays;
     }
 
-    @Override
-    public String toString() {
-        return "JobPosts{" +
-                "id=" + id +
-                ", postTitle='" + postTitle + '\'' +
-                ", company=" + company +
-                ", location=" + location +
-                ", link='" + link + '\'' +
-                ", details='" + details + '\'' +
-                '}';
-    }
 }

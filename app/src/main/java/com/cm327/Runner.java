@@ -1,33 +1,27 @@
 package com.cm327;
 
+import com.cm327.entity.Company;
 import com.cm327.entity.JobPosts;
+import com.cm327.repository.CompanyRepository;
 import com.cm327.repository.JobPostRepository;
 import com.cm327.services.DataReading;
+import org.hibernate.Hibernate;
 import org.postgresql.util.PSQLException;
 
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
+
+import java.io.IOException;
 
 public class Runner {
     public static void main(String[] args) {
 
 
-        JobPostRepository jobPostRepository = new JobPostRepository();
-
-
-
         DataReading dataReading = new DataReading();
+        try {
+            dataReading.jobPostsList();
+        } catch (IOException e) {
+            e.printStackTrace(); // TODO LOW : MAYBE A NEW LOGGER CAN BE USED.
+        }
 
-        dataReading.jobPostsList().forEach(jobPosts -> {
-
-            jobPostRepository.save(JobPosts.builder()
-                    .location(jobPosts.getLocation())
-                    .details(jobPosts.getDetails())
-                    .postTitle(jobPosts.getPostTitle())
-                    .link(jobPosts.getLink())
-                    .build());
-
-        });
 
     }
 }
