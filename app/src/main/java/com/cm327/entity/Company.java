@@ -20,7 +20,9 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long Id;
 
-
+    /**
+     * UNIQUE FIELD
+     */
     @Column(unique = true)
     String companyName;
 

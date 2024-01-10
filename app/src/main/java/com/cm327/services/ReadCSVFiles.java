@@ -4,7 +4,10 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +25,7 @@ public class ReadCSVFiles {
         List<CSVRecord[]> records = new ArrayList<>();
         File csvDirectory = new File(System.getProperty("user.dir")+"\\server\\src\\output_data");
         File[] files = csvDirectory.listFiles();
+
 
         if (files != null) {
             for (File file : files) {

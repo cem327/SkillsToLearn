@@ -1,6 +1,6 @@
 package com.cm327.entity;
 
-import com.cm327.utils.TurkishCity;
+import com.cm327.utils.enums.TurkishCity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,6 +26,9 @@ public class JobPosts {
     Company company;
     @Enumerated(EnumType.STRING)
     TurkishCity location;
+    /**
+     * UNIQUE FIELD
+     */
     @Column(unique = true, columnDefinition = "TEXT")
     String link;
     @Column(columnDefinition = "TEXT")

@@ -1,9 +1,14 @@
 package com.cm327.utils;
 
-import java.text.Normalizer;
-
 public class TurkishToEnglish {
 
+    /**
+     * Scraped websites are sometimes written in Turkish. This method aims to convert special characters to English.
+     * Also, punctuation makes hard to read pages. So, it is better to remove it.
+     *
+     * @param input - String to be cleaned.
+     * @return String – Cleaned String from Turkish characters and punctuation.
+     */
     public static String convertTurkishToEnglish(String input) {
         if (input == null || input.isEmpty()) {
             return input;
@@ -26,9 +31,7 @@ public class TurkishToEnglish {
 
         // Türkçe karakterleri İngilizce karakterlere çevir
 
-        String cleanedString = result.replaceAll("[\\p{Punct}&&[^']]+", "");
-
-        return cleanedString;
+        return result.replaceAll("[\\p{Punct}&&[^']]+", "");
     }
 }
 

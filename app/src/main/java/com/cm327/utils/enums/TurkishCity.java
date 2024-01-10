@@ -1,6 +1,9 @@
-package com.cm327.utils;
+package com.cm327.utils.enums;
 
-public enum TurkishCity {
+import lombok.Getter;
+
+@Getter
+public enum TurkishCity { // TODO : NEEDS ASCII CHARACTERS TO BE REMOVED.
     ADANA("Adana"),
     ADIYAMAN("Adıyaman"),
     AFYONKARAHISAR("Afyonkarahisar"),
