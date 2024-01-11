@@ -402,7 +402,7 @@ build
 /node_modules/async-csv/.github/FUNDING.yml
 /node_modules/async-csv/CHANGELOG.md
 /node_modules/async-csv/index.js
-/node_modules/async-csv/index.test.js
+/node_modules/async-csv/index.companyScraper.js
 /node_modules/async-csv/LICENSE
 /node_modules/async-csv/package.json
 /node_modules/async-csv/README.md
@@ -735,7 +735,7 @@ build
 /node_modules/color-name/LICENSE
 /node_modules/color-name/package.json
 /node_modules/color-name/README.md
-/node_modules/color-name/test.js
+/node_modules/color-name/companyScraper.js
 /node_modules/color-string/index.js
 /node_modules/color-string/LICENSE
 /node_modules/color-string/package.json
@@ -1053,7 +1053,7 @@ build
 /node_modules/enabled/LICENSE
 /node_modules/enabled/package.json
 /node_modules/enabled/README.md
-/node_modules/enabled/test.js
+/node_modules/enabled/companyScraper.js
 /node_modules/entities/lib/esm/generated/decode-data-html.d.ts
 /node_modules/entities/lib/esm/generated/decode-data-html.d.ts.map
 /node_modules/entities/lib/esm/generated/decode-data-html.js
@@ -1139,7 +1139,7 @@ build
 /node_modules/fn.name/LICENSE
 /node_modules/fn.name/package.json
 /node_modules/fn.name/README.md
-/node_modules/fn.name/test.js
+/node_modules/fn.name/companyScraper.js
 /node_modules/follow-redirects/debug.js
 /node_modules/follow-redirects/http.js
 /node_modules/follow-redirects/https.js
@@ -1241,7 +1241,7 @@ build
 /node_modules/kuler/LICENSE
 /node_modules/kuler/package.json
 /node_modules/kuler/README.md
-/node_modules/kuler/test.js
+/node_modules/kuler/companyScraper.js
 /node_modules/logform/dist/align.js
 /node_modules/logform/dist/browser.js
 /node_modules/logform/dist/cli.js
@@ -1304,7 +1304,7 @@ build
 /node_modules/memory-pager/LICENSE
 /node_modules/memory-pager/package.json
 /node_modules/memory-pager/README.md
-/node_modules/memory-pager/test.js
+/node_modules/memory-pager/companyScraper.js
 /node_modules/mime-db/db.json
 /node_modules/mime-db/HISTORY.md
 /node_modules/mime-db/index.js
@@ -2082,7 +2082,7 @@ build
 /node_modules/nth-check/README.md
 /node_modules/objects-to-csv/CHANGELOG.md
 /node_modules/objects-to-csv/index.js
-/node_modules/objects-to-csv/index.test.js
+/node_modules/objects-to-csv/index.companyScraper.js
 /node_modules/objects-to-csv/LICENSE
 /node_modules/objects-to-csv/package.json
 /node_modules/objects-to-csv/README.md
@@ -2169,7 +2169,7 @@ build
 /node_modules/proxy-from-env/LICENSE
 /node_modules/proxy-from-env/package.json
 /node_modules/proxy-from-env/README.md
-/node_modules/proxy-from-env/test.js
+/node_modules/proxy-from-env/companyScraper.js
 /node_modules/psl/data/rules.json
 /node_modules/psl/dist/psl.js
 /node_modules/psl/dist/psl.min.js
@@ -2219,7 +2219,7 @@ build
 /node_modules/requires-port/LICENSE
 /node_modules/requires-port/package.json
 /node_modules/requires-port/README.md
-/node_modules/requires-port/test.js
+/node_modules/requires-port/companyScraper.js
 /node_modules/safe-buffer/index.d.ts
 /node_modules/safe-buffer/index.js
 /node_modules/safe-buffer/LICENSE
@@ -2278,7 +2278,7 @@ build
 /node_modules/sparse-bitfield/LICENSE
 /node_modules/sparse-bitfield/package.json
 /node_modules/sparse-bitfield/README.md
-/node_modules/sparse-bitfield/test.js
+/node_modules/sparse-bitfield/companyScraper.js
 /node_modules/stack-trace/lib/stack-trace.js
 /node_modules/stack-trace/.npmignore
 /node_modules/stack-trace/License
@@ -2306,7 +2306,7 @@ build
 /node_modules/text-hex/LICENSE
 /node_modules/text-hex/package.json
 /node_modules/text-hex/README.md
-/node_modules/text-hex/test.js
+/node_modules/text-hex/companyScraper.js
 /node_modules/tough-cookie/lib/cookie.js
 /node_modules/tough-cookie/lib/memstore.js
 /node_modules/tough-cookie/lib/pathMatch.js
