@@ -16,6 +16,8 @@ This project is a system that retrieves job posts from various online job listin
 *   Node.js
 *   Apache Commons CSV
 *   Gradle
+*   Axios
+*   Cheerio
 
 ## How to Contribute
 
