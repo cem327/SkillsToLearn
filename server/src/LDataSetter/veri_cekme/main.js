@@ -1,10 +1,10 @@
-const jobScraper = require('./jobScraper');
+const {allURLScrape} = require('./jobScraper');
 
 
 async function main(){
-    await jobScraper.scrapeJobs();
+    await allURLScrape();
 
 }
 // Scrape LinkedIn job details and listings
-main();
+
 module.exports = {main};

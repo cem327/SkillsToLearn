@@ -1,17 +1,16 @@
 package com.cm327;
 
 
-import com.cm327.services.DataReading;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.IOException;
 
+@SpringBootApplication
 public class Runner {
 
 
-    public static void main(String[] args) throws IOException {
-
-        DataReading dataReading = new DataReading();
-        dataReading.jobPostsList();
+    public static void main(String[] args) {
+        SpringApplication.run(Runner.class, args); // run the app
 
 
 

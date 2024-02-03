@@ -1,4 +1,4 @@
-package com.cm327.services;
+package com.cm327.utils;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -23,7 +23,7 @@ public class ReadCSVFiles {
     public List<CSVRecord[]> readCSVFiles() throws IOException {
 
         List<CSVRecord[]> records = new ArrayList<>();
-        File csvDirectory = new File(System.getProperty("user.dir")+"\\server\\src\\output_data");
+        File csvDirectory = new File(System.getProperty("user.dir") + "\\server\\src\\LDataSetter\\output_data");
         File[] files = csvDirectory.listFiles();
 
 
@@ -31,8 +31,12 @@ public class ReadCSVFiles {
             for (File file : files) {
                 try (Reader reader = new FileReader(file);
                      CSVParser csvParser = new CSVParser(reader, CSVFormat.EXCEL.builder().setHeader().setSkipHeaderRecord(true).build())) {
+                    System.out.println(csvParser.getHeaderNames() + "\n\n\n");
 
-                    records.add(csvParser.getRecords().toArray(CSVRecord[]::new));
+                    if (csvParser.getHeaderNames().contains("Location")) {
+                        records.add(csvParser.getRecords().toArray(CSVRecord[]::new));
+                    }
+
                 }
             }
         }

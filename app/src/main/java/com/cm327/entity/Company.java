@@ -31,15 +31,5 @@ public class Company {
     private List<JobPosts> jobAds = new ArrayList<>();
 
 
-    public Company(String companyName) {
-        this.companyName = companyName;
-    }
 
-    @Override
-    public String toString() {
-        return "Company{" +
-                "Id=" + Id +
-                ", companyName=" + companyName +
-                '}';
-    }
 }

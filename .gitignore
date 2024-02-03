@@ -84,7 +84,7 @@ build
 /node_modules/@dabh/diagnostics/browser/index.js
 /node_modules/@dabh/diagnostics/browser/override.js
 /node_modules/@dabh/diagnostics/browser/production.js
-/node_modules/@dabh/diagnostics/logger/console.js
+/node_modules/@dabh/diagnostics/init/console.js
 /node_modules/@dabh/diagnostics/modifiers/namespace.js
 /node_modules/@dabh/diagnostics/modifiers/namespace-ansi.js
 /node_modules/@dabh/diagnostics/node/development.js
@@ -2419,10 +2419,10 @@ build
 /node_modules/winston/dist/winston/transports/stream.js
 /node_modules/winston/dist/winston/common.js
 /node_modules/winston/dist/winston/container.js
-/node_modules/winston/dist/winston/create-logger.js
+/node_modules/winston/dist/winston/create-loggers.js
 /node_modules/winston/dist/winston/exception-handler.js
 /node_modules/winston/dist/winston/exception-stream.js
-/node_modules/winston/dist/winston/logger.js
+/node_modules/winston/dist/winston/loggers.js
 /node_modules/winston/dist/winston/profiler.js
 /node_modules/winston/dist/winston/rejection-handler.js
 /node_modules/winston/dist/winston/tail-file.js
@@ -2437,10 +2437,10 @@ build
 /node_modules/winston/lib/winston/transports/stream.js
 /node_modules/winston/lib/winston/common.js
 /node_modules/winston/lib/winston/container.js
-/node_modules/winston/lib/winston/create-logger.js
+/node_modules/winston/lib/winston/create-loggers.js
 /node_modules/winston/lib/winston/exception-handler.js
 /node_modules/winston/lib/winston/exception-stream.js
-/node_modules/winston/lib/winston/logger.js
+/node_modules/winston/lib/winston/loggers.js
 /node_modules/winston/lib/winston/profiler.js
 /node_modules/winston/lib/winston/rejection-handler.js
 /node_modules/winston/lib/winston/tail-file.js

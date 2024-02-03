@@ -23,7 +23,7 @@ async function main() {
                 analiz.push({term : term, termCount: termCount[term], CompanyCount: termCompaniesCount[term],CompanyNames:termCompanies[term] });
 
             });
-            await writeToCSV(analiz, "LAnaliz");
+            await writeToCSV(analiz, "l_Analiz");
         }
 
     } catch (error) {
@@ -46,5 +46,5 @@ async function readAllCSVsInFolder(folderPath) {
 
     return csvData;
 }
-main();
+
 module.exports = {main};

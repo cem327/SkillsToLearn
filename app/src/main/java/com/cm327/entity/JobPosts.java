@@ -2,13 +2,15 @@ package com.cm327.entity;
 
 import com.cm327.utils.enums.TurkishCity;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
-@Setter
-@Getter
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -36,17 +38,9 @@ public class JobPosts {
     @Temporal(TemporalType.DATE)
     Date date;
     @ElementCollection
+    @Column(columnDefinition = "TEXT")
     private List<String> words;
     int openDays;
 
-    public JobPosts(String postTitle, Company company, TurkishCity location, String link, String details, Date date, int openDays) {
-        this.postTitle = postTitle;
-        this.company = company;
-        this.location = location;
-        this.link = link;
-        this.details = details;
-        this.date = date;
-        this.openDays = openDays;
-    }
 
 }
