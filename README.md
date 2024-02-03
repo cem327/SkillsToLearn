@@ -5,10 +5,11 @@ This project is a system that retrieves job posts from various online job listin
 ## Project Objectives
 
 *   Fetching and storing the content of job posts.
-*   Analyzing the words in job posts.
+*   Analyzing the words in job posts
+*   Eliminating outlier data points such as fake posts. 
 *   Identifying and ranking the skills desired by companies.
 
-## Technologies Used
+## Technologies\Libraries Used
 
 *   Lombok
 *   Hibernate
@@ -18,6 +19,7 @@ This project is a system that retrieves job posts from various online job listin
 *   Gradle
 *   Axios
 *   Cheerio
+*   Spring Framework
 
 ## How to Contribute
 
