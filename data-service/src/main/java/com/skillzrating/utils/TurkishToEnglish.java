@@ -1,4 +1,4 @@
-package com.cm327.utils;
+package com.skillzrating.utils;
 
 public class TurkishToEnglish {
 

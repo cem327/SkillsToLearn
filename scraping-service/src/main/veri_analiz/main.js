@@ -5,11 +5,16 @@ const displayResults = require('./displayResults');
 const {writeToCSV} = require("../utils/csvWriter");
 const {resolve} = require("path");
 const {readdirSync} = require("fs");
+const path = require("path");
+const {dateMaker} = require("../utils/dateStringMaker");
 
+const analyzeFilesPath = path.resolve(__dirname, `../`, 'analyzedData')
 
 async function main() {
+
     const folderPath = resolve(__dirname, '../output_data');
     const analiz=[];
+    const today = await dateMaker();
     try {
         const allCSVData = await readAllCSVsInFolder(folderPath);
 
@@ -23,7 +28,7 @@ async function main() {
                 analiz.push({term : term, termCount: termCount[term], CompanyCount: termCompaniesCount[term],CompanyNames:termCompanies[term] });
 
             });
-            await writeToCSV(analiz, "l_Analiz");
+            await writeToCSV(analiz, `l_Analiz_${today}`, analyzeFilesPath);
         }
 
     } catch (error) {

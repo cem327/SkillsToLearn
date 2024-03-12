@@ -10,5 +10,11 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
 }
 
-rootProject.name = "tutorial"
-include("app")
+rootProject.name = "SkillzRating"
+include("data-service")
+include("auth-service")
+include("user-service")
+include("config-server")
+include("config-server-git")
+include("elastic-service")
+include("scraping-service")

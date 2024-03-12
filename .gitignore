@@ -2469,3 +2469,10 @@ build
 /gradle/wrapper/gradle-wrapper.jar
 /gradle/wrapper/gradle-wrapper.properties
 /server.iml
+/ReadMePriv.md
+/docker-compose.yml
+/elastic-service/src/main/java/com/skillzrating/ssl/
+/scraping-service/src/main/veri_cekme/proxyList.js
+/scraping-service/src/main/utils/proxyMaker.js
+/scraping-service/src/main/output_data/
+/scraping-service/src/main/test_files/

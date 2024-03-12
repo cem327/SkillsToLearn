@@ -1,0 +1,35 @@
+ext {
+    versions = [
+            springBoot : "3.2.2",
+            postgresql : "42.7.1",
+            lombok     : "1.18.30",
+            openApi    : "2.3.0",
+            mapStruct  : "1.5.5.Final",
+            springCloud: "4.1.0",
+            jwt        : "4.4.0",
+            csv        : "1.10.0",
+            jupiter    : "5.10.2"
+    ]
+
+    libs = [
+            springBootWeb                     : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+            springBootJpa                     : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
+            springBootValidation              : "org.springframework.boot:spring-boot-starter-validation:${versions.springBoot}",
+            springBootStarterActuator         : "org.springframework.boot:spring-boot-starter-actuator:${versions.springBoot}",
+            springBootDataMongo               : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
+            springCloudStarterConfig          : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+            springCloudConfigClient           : "org.springframework.cloud:spring-cloud-config-client:${versions.springCloud}",
+            springCloudConfigServer           : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+            springBootStarterDataElasticsearch: "org.springframework.boot:spring-boot-starter-data-elasticsearch:${versions.springBoot}",
+            lombok                            : "org.projectlombok:lombok:${versions.lombok}",
+            postgresql                        : "org.postgresql:postgresql:${versions.postgresql}",
+            openApi                           : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.openApi}",
+            mapStruct                         : "org.mapstruct:mapstruct:${versions.mapStruct}",
+            mapStructProcessor                : "org.mapstruct:mapstruct-processor:${versions.mapStruct}",
+            springOpenFeign                   : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+            javaJwt                           : "com.auth0:java-jwt:${versions.jwt}",
+            apacheCommonsCSV                  : "org.apache.commons:commons-csv:${versions.csv}",
+            jupiter                           : "org.junit.jupiter:junit-jupiter-api:${versions.jupiter}"
+    ]
+
+}

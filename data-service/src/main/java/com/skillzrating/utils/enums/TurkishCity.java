@@ -1,4 +1,4 @@
-package com.cm327.utils.enums;
+package com.skillzrating.utils.enums;
 
 import lombok.Getter;
 
@@ -87,8 +87,8 @@ public enum TurkishCity {
     ZONGULDAK("Zonguldak");
     private final String cityName;
 
-    TurkishCity(String cItyName) {
-        this.cityName = cItyName;
+    TurkishCity(String cityName) {
+        this.cityName = cityName;
     }
 
 }

@@ -15,6 +15,7 @@ function  processData(jobPosts) {
         const companyName = job['Company']; // Assuming the column name is 'Company Name'
         const description = job.Details;
         const words = description.split(/\s+/);
+        const searchTitle = job['Role'];
 
 
         words.forEach((word) => {

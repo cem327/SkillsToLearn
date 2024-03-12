@@ -1,13 +1,15 @@
-package com.cm327.utils;
+package com.skillzrating.utils;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.io.input.BOMInputStream;
 
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.Reader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,9 +31,15 @@ public class ReadCSVFiles {
 
         if (files != null) {
             for (File file : files) {
-                try (Reader reader = new FileReader(file);
-                     CSVParser csvParser = new CSVParser(reader, CSVFormat.EXCEL.builder().setHeader().setSkipHeaderRecord(true).build())) {
-                    System.out.println(csvParser.getHeaderNames() + "\n\n\n");
+                try (FileInputStream fileInputStream = new FileInputStream(file);
+                     BOMInputStream bomInputStream = new BOMInputStream(fileInputStream);
+                     InputStreamReader reader2 = new InputStreamReader(bomInputStream, StandardCharsets.UTF_8);
+                     CSVParser csvParser = new CSVParser(reader2, CSVFormat.EXCEL.builder()
+                             .setHeader()
+                             .setAllowMissingColumnNames(false)
+                             .setIgnoreSurroundingSpaces(true)
+                             .setSkipHeaderRecord(true)
+                             .build())) {
 
                     if (csvParser.getHeaderNames().contains("Location")) {
                         records.add(csvParser.getRecords().toArray(CSVRecord[]::new));
