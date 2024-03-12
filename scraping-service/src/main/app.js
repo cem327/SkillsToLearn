@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const express = require('express');
 const veriCekmeMain = require('./veri_cekme/main');
 const veriAnalizMain = require('./veri_analiz/main');
 

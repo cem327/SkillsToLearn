@@ -19,7 +19,7 @@ function  processData(jobPosts) {
 
 
         words.forEach((word) => {
-            const cleanedWord = cleanAndNormalizeTurkish(word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()'"“”‘’]/g, '').toLowerCase());
+            const cleanedWord = cleanAndNormalizeTurkish(word.replace(/[.,\/#!$%^&*;:{}=\-_`~()'"“”‘’]/g, '').toLowerCase());
 
             if (softwareTerms.includes(cleanedWord)) {
                 termCount[cleanedWord] = (termCount[cleanedWord] || 0) + 1;

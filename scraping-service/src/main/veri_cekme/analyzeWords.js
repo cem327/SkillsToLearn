@@ -10,7 +10,7 @@ function jobDetailsAnalyzed(jobDetails){
 
 
     words.forEach(word=>{
-        const cleanedWord = cleanAndNormalizeTurkish(word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()'"“”‘’]/g, '').toLowerCase());
+        const cleanedWord = cleanAndNormalizeTurkish(word.replace(/[.,\/#!$%^&*;:{}=\-_`~()'"“”‘’]/g, '').toLowerCase());
 
         if (softwareTerms.includes(cleanedWord)) {
             terms.push(cleanedWord);
