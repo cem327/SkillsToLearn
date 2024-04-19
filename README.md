@@ -25,3 +25,6 @@ This project is a system that retrieves job posts from various online job listin
 
 You can contact via email: cmylmz327@hotmail.com
 
+## PRIVACY
+
+Due to ethical concerns, some files are kept hidden.
